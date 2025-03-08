@@ -61,5 +61,3 @@ Server starts on
 http://localhost:5173/
 
 Happy chatting! 🚀# live-chat-app git init
-# live-chat-app git init
-# live-chat-app

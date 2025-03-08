@@ -61,4 +61,4 @@ Hosted version: https://live-chat-app-lyart.vercel.app/
 Server starts on 
 http://localhost:5173/
 
-Happy chatting! 🚀# live-chat-app git init
+Happy chatting! 🚀

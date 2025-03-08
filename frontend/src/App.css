@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #8e44ad, #e84393);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: linear-gradient(to right, #3498db, #8e44ad);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-messages {
+  height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  color: white;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.sent {
+  background: #4a90e2;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+
+.received {
+  background: #9b59b6;
+  align-self: flex-start;
+  margin-left: 10px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 10px 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  background: white;  
+  color: black;       
+  font-size: 16px;
+}
+
+.chat-input button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background: #219150;
+}
+
+.icon {
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  color: #333;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  z-index: 100;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Users Panel */
+.active-users {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.active-users h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.active-users ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.active-users li {
+  padding: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Username Container - Match Chat Box */
+.username-container {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  height: 250px; /* Ensures the box has enough height */
+}
+
+/* Centering username input */
+.username-container input {
+  width: 80%;
+  max-width: 280px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  color: black;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Centering Join Chat Button */
+.username-container button {
+  width: 80%;
+  max-width: 280px;
+  background: rgb(233, 147, 223);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.username-container button:hover {
+  background: #333;
+}
+
+/* Timestamp formatting */
+.timestamp {
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 8px;
+}
+
+/* New formatting for timestamps like "Just now" */
+.timestamp.just-now {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.auth-container {
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container input {
+  width: 94%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  background: white; /* Set input background to white */
+  color: black; /* Set text color to black */
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-container button:hover {
+  background: #4500b5;
+}
+
+.auth-container p {
+  color: rgb(74, 74, 74); /* Set register text color to black */
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-container h2 {
+  color: rgb(95, 95, 95); /* Set register text color to black */
+  cursor: pointer;
+  margin-top: 10px;
+}
+.auth-container input[type="text"] {
+  display: block; /* Ensure visibility */
+}
+
+
+.logout-button {
+  color: white;
+  background-color: rgb(245, 114, 239);
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius:  0 0 10px 10px;
+}
+
+.dm-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.dm-selector button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: rgb(245, 114, 239);
+  color: white;
+}
+
+.dm-selector button:hover {
+  background: #555;
+}
+
+.dm-selector select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+.dm-dropdown {
+  color: black;
+}
+.dm-dropdown option[disabled] {
+  color: gray;
+}

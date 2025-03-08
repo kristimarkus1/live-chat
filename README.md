@@ -1,6 +1,7 @@
 # ChatMe - Realtime Chat Application
 
 ChatMe is a real-time chat application built with React, Firebase Firestore, and Firebase Authentication. It supports both public chat and private direct messaging (DMs) between registered users.
+Hosted version: https://live-chat-app-lyart.vercel.app/ 
 
 ## Features
 
@@ -20,7 +21,7 @@ ChatMe is a real-time chat application built with React, Firebase Firestore, and
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/kristimarkus1/chatme.git
+   git clone https://github.com/kristimarkus1/live-chat.git
    cd chatme
    ```
 
